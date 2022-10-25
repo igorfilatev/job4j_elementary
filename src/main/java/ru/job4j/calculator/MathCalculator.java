@@ -1,15 +1,27 @@
 package ru.job4j.calculator;
 
-import ru.job4j.math.MathFunction;
+import static ru.job4j.math.MathFunction.*;
 
 public class MathCalculator {
 
-    public static double sumAndMultiply(double first, double second) {
-        return MathFunction.sum(first, second)
-                + MathFunction.multiply(first, second);
+    public static double plusAndUmn(double first, double second) {
+        return plus(first, second)
+                + umn(first, second);
+    }
+
+    public static double minusandDel(double first, double second) {
+        return minus(first, second)
+                - del(first, second);
+    }
+
+    public static double sumall(double first, double second) {
+        return plus(first, second) + minus(first, second)
+                + umn(first, second) + del(first, second);
     }
 
     public static void main(String[] args) {
-        System.out.println("Результат расчета равен: " + sumAndMultiply(10, 20));
+        System.out.println("Результат расчета равен: " + plusAndUmn(10, 20));
+        System.out.println("Результат расчета равен: " + minusandDel(10, 20));
+        System.out.println("Результат расчета равен: " + sumall(10, 20));
     }
 }
