@@ -13,4 +13,31 @@ public class SqAreaTest {
         double out = SqArea.square(p, k);
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void whenP10K5Square3dot47() {
+        double expected = 3.47;
+        int p = 10;
+        double k = 5;
+        double out = SqArea.square(p, k);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenP28K3Square36dot75() {
+        double expected = 36.75;
+        int p = 28;
+        double k = 3;
+        double out = SqArea.square(p, k);
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenP75K16Square347dot22() {
+        double expected = 347.22;
+        int p = 100;
+        double k = 5;
+        double out = SqArea.square(p, k);
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
